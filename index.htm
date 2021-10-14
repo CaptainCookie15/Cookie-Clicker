@@ -27,11 +27,11 @@ body {
 }, 1000);
 
    window.setInterval(function () {
-  document.getElementById("cps").innerHTML = "Your CPS(Cookies Per Second) is " + cps;
+  document.getElementById("cps").innerHTML = "Your CPS(Cookies Per Second) is " + localStorage.cps;
 });
    
    function upgrade() {
-      if (cookies > 9){
+      if (localStorage.cookies > 9){
         alert("You have upgraded your cps")
         localStorage.cps = Number(localStorage.cps)+1;
         localStorage.cookies = Number(localStorage.cookies)-1;
@@ -42,7 +42,7 @@ body {
    }
 
    function upgradeGolden() {
-      if (cookies > 99){
+      if (localStorage.cookies > 99){
         alert("You have imported a golden cookie from cookie clicker.")
         localStorage.cps = Number(localStorage.cps)+15;
         localStorage.cookies = Number(localStorage.cookies)-100;
