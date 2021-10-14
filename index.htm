@@ -36,7 +36,17 @@ body {
       localStorage.setItem("gameSave", JSON.stringify(gameSave));
    }
   
+  function crash() {
+    var gameSave = {
+       cookies: 0,
+       cps: 0
+    };
+    localStorage.setItem("gameSave", JSON.stringify(gameSave));
+    location.reload();
+  }
+  
   function wipeSave() {
+    window.prompt("Do you want to wipe your save? All progress will be deleted!")
     var gameSave = {
          cookies: 0,
          cps: 0
@@ -94,13 +104,13 @@ window.onload = function() {
   
    function hax() {
       if (cookies > 99999999){
-        alert("You downloaded hacks from notavirus.com, and somehow didn't get hacked...")
+        alert("You downloaded hacks from notavirus.com")
         cps += 1000000
         cookies -= 100000000
       }
       else{
-        alert("When Mcafee doesn't work...")
-        wipeSave();
+        alert("You should have installed Mcafee...")
+        crash();
       }
    }
 
@@ -132,8 +142,7 @@ window.onload = function() {
 
 <button type="button" onclick="saveGame()">Save</button>
   
-<button type="button" onclick="wipeSave()", window.prompt("Do you want to wipe your save? All progress will be deleted!")
->WIPE SAVE</button>
+<button type="button" onclick="wipeSave()">WIPE SAVE</button>
 
 
 </body>
