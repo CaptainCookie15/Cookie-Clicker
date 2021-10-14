@@ -72,7 +72,7 @@ window.onload = function() {
    }
 
    function upgradeGolden() {
-      if (cookies > 99){
+      if (cookies > 499){
         alert("You have imported a golden cookie from cookie clicker.")
         cps += 15
         cookies -= 500
@@ -81,6 +81,30 @@ window.onload = function() {
         alert("You need 100 cookies to get a golden cookie!")
       }
    }
+  
+   function upgradeUh() {
+      if (cookies > 9999){
+        alert("You bought a (INSERT-NAME-HERE) from a shady website.")
+        cps += 350
+        cookies -= 10000
+      }
+      else{
+        alert("You need 350 cookies to get a (INSERT-NAME-HERE)!")
+      }
+   }
+  
+   function hax() {
+      if (cookies > 99999999){
+        alert("You downloaded hacks from notavirus.com, and somehow didn't get hacked...")
+        cps += 1000000
+        cookies -= 100000000
+      }
+      else{
+        alert("When Mcafee doesn't work...")
+        wipeSave();
+      }
+   }
+
 
    function changeName() {
       name = prompt("What would you like your new name to be:")
@@ -102,6 +126,10 @@ window.onload = function() {
 <button type="button" onclick="upgrade()">First Upgrade: Cursor (1 cps)</button>
 
 <button type="button" onclick="upgradeGolden()">Second Upgrade: Golden Cookie(15 cps)</button>
+  
+<button type="button" onclick="upgradeUh()">Third Upgrade: (INSERT-NAME-HERE)(350 cps)</button>
+  
+<button type="button" onclick="hax()">???</button>
 
 <button type="button" onclick="saveGame()">Save</button>
   
