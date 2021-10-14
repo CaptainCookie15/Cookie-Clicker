@@ -46,11 +46,13 @@ body {
   }
   
   function wipeSave() {
-    window.prompt("Do you want to wipe your save? All progress will be deleted!")
-    var gameSave = {
-         cookies: 0,
-         cps: 0
-      };
+    yn = window.prompt("Do you want to wipe your save? All progress will be deleted!")
+    if yn === "yes" {
+      var gameSave = {
+           cookies: 0,
+           cps: 0
+        };
+    }
       localStorage.setItem("gameSave", JSON.stringify(gameSave));
       location.reload();
    }
