@@ -8,4 +8,5 @@ Game Created :)
 
 Update: 2.0(10/13/2021)
 Added save game and wipe save
-Nerfed golden cookie and cursor
+Nerfed golden cookies and cursors
+Added upgrades (INSERT-NAME-HERE) and ???
