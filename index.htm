@@ -37,8 +37,7 @@ body {
    }
   
   function wipeSave() {
-    alert("Do you want to wipe your save? All progress will be deleted!")
-      var gameSave = {
+    var gameSave = {
          cookies: 0,
          cps: 0
       };
@@ -133,7 +132,8 @@ window.onload = function() {
 
 <button type="button" onclick="saveGame()">Save</button>
   
-<button type="button" onclick="wipeSave()">WIPE SAVE</button>
+<button type="button" onclick="wipeSave()", window.prompt("Do you want to wipe your save? All progress will be deleted!")
+>WIPE SAVE</button>
 
 
 </body>
