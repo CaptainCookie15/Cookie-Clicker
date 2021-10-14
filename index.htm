@@ -35,6 +35,15 @@ body {
       };
       localStorage.setItem("gameSave", JSON.stringify(gameSave));
    }
+  
+  function wipeSave() {
+    alert("Do you want to wipe your save? All progress will be deleted!")
+      var gameSave = {
+         cookies: 0,
+         cps: 0
+      };
+      localStorage.setItem("gameSave", JSON.stringify(gameSave));
+   }
 
    function loadGame() {
       var savedGame = JSON.parse(localStorage.getItem("gameSave"));
@@ -102,6 +111,8 @@ window.onload = function() {
 <button type="button" onclick="sus()">Next Upgrade: Suspicious button</button>
 
 <button type="button" onclick="saveGame()">Save</button>
+  
+<button type="button" onclick="wipeSave()">WIPE SAVE</button>
 
 
 </body>
