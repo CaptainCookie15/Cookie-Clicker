@@ -121,7 +121,7 @@ window.onload = function() {
   function getSampleText() {
 
   Promise.all([
-    fetch('people.txt').then(x => x.text())
+    fetch('leaderboard.txt').then(x => x.text())
   ]).then(([sampleResp]) => {
     document.getElementById("leaderboard").innerHTML = sampleResp;
   });
