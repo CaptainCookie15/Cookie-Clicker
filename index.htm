@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <style>
@@ -113,14 +112,23 @@ window.onload = function() {
       }
    }
 
-
    function changeName() {
       name = prompt("What would you like your new name to be:")
       alert(name)
       document.getElementById("username").innerHTML = name + "'s Bakery";
    }
-</script>
 
+  function getSampleText() {
+
+  Promise.all([
+    fetch('people.txt').then(x => x.text())
+  ]).then(([sampleResp]) => {
+    document.getElementById("leaderboard").innerHTML = sampleResp;
+  });
+}
+
+getSampleText();
+</script>
 
 <h1>Cookie Clicker</h1>
 <p style="color:red" id="username">Random Dude's Bakery</p>
@@ -130,6 +138,8 @@ window.onload = function() {
 <p>Click the cookie to begin</p>
 
 <button type="button" onclick="cookieClick()"><img src="https://cdn.pixabay.com/photo/2020/11/28/11/25/cookie-5784367_1280.png" alt="Cookie didn't load :(" width="100" height="100"></button>
+
+<br>
 
 <button type="button" onclick="upgrade()">First Upgrade: Cursor (1 cps)</button>
 
@@ -143,7 +153,9 @@ window.onload = function() {
   
 <button type="button" onclick="wipeSave()">WIPE SAVE</button>
 
+<br>
+
+<h2 id="leaderboard" style="color:yellow">Username</th>
 
 </body>
 </html>
-
